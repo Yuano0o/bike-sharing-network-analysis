@@ -1,0 +1,31 @@
+{
+  "data_root": ".",
+  "cleaning_script": "tools/bikeshare_cleaning.py",
+  "output_root": "batch_outputs",
+  "chunksize": 200000,
+  "max_duration_min": 240,
+  "cities": [
+    {
+      "city": "san_francisco",
+      "inputs": [
+        "data/san_francisco/*.csv",
+        "data/san_francisco/*.zip"
+      ]
+    },
+    {
+      "city": "nyc",
+      "inputs": [
+        "data/nyc/*.csv",
+        "data/nyc/*.zip"
+      ]
+    },
+    {
+      "city": "washington",
+      "inputs": [
+        "data/washington/*.csv",
+        "data/washington/*.zip"
+      ],
+      "skip_cleaned_csv": true
+    }
+  ]
+}
